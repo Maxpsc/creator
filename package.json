@@ -1,5 +1,5 @@
 {
-  "name": "create-any",
+  "name": "@og/creator",
   "version": "1.0.0",
   "description": "Creator for basic JS project",
   "bin": {
@@ -7,13 +7,20 @@
   },
   "main": "./dist/bundle.cjs.js",
   "scripts": {
-    "dev:rollup": "rm -rf dist/ && rollup -c -w --bundleConfigAsCjs",
     "dev": "node scripts/dev.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "release": "pnpm build && pnpm release"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "cli",
+    "scaffold"
+  ],
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "author": "Maxpsc",
+  "license": "MIT",
   "devDependencies": {
     "@eljs/release": "^0.5.2",
     "@rollup/plugin-commonjs": "^21.0.2",

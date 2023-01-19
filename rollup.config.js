@@ -5,9 +5,6 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 
-// const { resolveRoot } = require('./scripts/utils')
-
-// const pkgJSONPath = resolveRoot('package.json')
 const pkg = require('./package.json')
 const name = path.basename(__dirname)
 
@@ -70,7 +67,6 @@ function createConfig(format, output, plugins = []) {
   const entryFile = `src/index.ts`
 
   return {
-    // input: resolveRoot(entryFile),
     input: entryFile,
     external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
     plugins: [
