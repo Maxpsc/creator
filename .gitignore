@@ -1,0 +1,27 @@
+# System
+.DS_Store
+.idea/
+.vscode
+.turbo
+
+# Temp
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+.eslintcache
+
+# Coverage
+coverage/
+*.lcov
+
+# Dependency
+node_modules/
+
+# Customize
+dist/
+es/
+lib/
+*.local.*
+*.mine.*
