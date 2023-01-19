@@ -1,6 +1,6 @@
 {
   "name": "@og/creator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Creator for basic JS project",
   "bin": {
     "creator": "bin/main.js"
@@ -21,6 +21,10 @@
   ],
   "author": "Maxpsc",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maxpsc/creator.git"
+  },
   "devDependencies": {
     "@eljs/release": "^0.5.2",
     "@rollup/plugin-commonjs": "^21.0.2",
