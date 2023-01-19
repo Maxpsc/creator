@@ -1,7 +1,16 @@
 
-# create-any
+# @og/creator
 
-项目如其名，可用于创建任何类型前端项目的脚手架
+个人项目脚手架，待补充~
 
 ## Feature
 
+## Usage
+```
+npx @og/creator create projectName
+```
+
+### Options
+
+
+## Todo
