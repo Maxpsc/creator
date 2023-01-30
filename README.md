@@ -1,13 +1,13 @@
 
-# og-creator
+# og-toolkit
 
-个人项目脚手架，待补充~
+A node toolkit for CLI
 
 ## Feature
 
 ## Usage
 ```
-npx og-creator create projectName
+npx og-toolkit create projectName
 ```
 
 ### Options

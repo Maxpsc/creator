@@ -2,6 +2,7 @@ import path from 'path'
 import { prompt, type Question } from 'inquirer'
 import { existsSync, mkdirSync, removeSync, readJSONSync } from 'fs-extra'
 import { sync as cmdExistsSync } from 'command-exists'
+import { compile } from 'handlebars'
 import { CreateConstructOptions, TemplateConfig } from './types'
 import {
   projectHasGit,
@@ -176,9 +177,9 @@ export default class Creator {
 	}
 
   private async _generate() {
-		const metaPath = path.join(this._templateTmpDir, this._targetTemplate?.metaDir ?? '')
-		const metaInfo = readJSONSync(metaPath)
-		console.log('metaInfo', metaInfo)
+		// const metaPath = path.join(this._templateTmpDir, this._targetTemplate?.metaDir ?? '')
+		// const metaInfo = readJSONSync(metaPath)
+		// console.log('metaInfo', metaInfo)
 
 		const srcDir = path.join(this._templateTmpDir, this._targetTemplate?.templateDir ?? '')
 		await copyFileWithVars(srcDir, this._rootDir, this._templateFields)
@@ -192,11 +193,14 @@ export default class Creator {
     const questions: Question[] = []
     for (const field in params) {
       const config = params[field]
+			
+			const defaultStr = (config.default as string) ? compile(config.default)(this._fields) : ''
+
       questions.push({
         type: config.type ?? 'input',
         name: field,
         message: config.message,
-        default: '',
+        default: defaultStr,
       })
     }
     return questions

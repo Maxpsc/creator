@@ -1,9 +1,9 @@
 {
-  "name": "og-creator",
+  "name": "og-toolkit",
   "version": "0.0.1",
-  "description": "Creator for basic JS project",
+  "description": "A node toolkit for CLI",
   "bin": {
-    "creator": "bin/main.js"
+    "og": "bin/main.js"
   },
   "main": "./dist/bundle.cjs.js",
   "scripts": {
