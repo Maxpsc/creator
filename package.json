@@ -5,7 +5,9 @@
   "bin": {
     "og": "bin/main.js"
   },
-  "main": "./dist/bundle.cjs.js",
+  "main": "./dist/create-any.cjs.js",
+  "module": "./dist/create-any.esm.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "node scripts/dev.js",
     "build": "node scripts/build.js",
